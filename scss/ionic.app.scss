@@ -1,0 +1,79 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+$select-color:	#bbd8ff;
+
+.item-avatar > img:first-child, .item-avatar .item-content > img:first-child {
+	border-radius: 0;
+}
+
+.selected {
+	background-color: $select-color;
+	
+	.item-content {
+		background-color: $select-color;
+	}
+}
+
+.filelist h2 {
+	display: table;
+	
+	> span, > .tag-editor {
+		display: table-cell;
+	}
+	
+	.tag-editor {
+		border: none;
+		background-color: inherit;
+		
+		.tag-input {
+			background-color: inherit;
+		}
+	}
+}
+
+.button-icon.overlay > i {
+	position: absolute;
+	left: 10%;
+	top: 5%;
+	transform: scale(.4, .4);
+	color: white;
+}
+
+.dirty, .dirty .item-content {
+	background-color: #F78181;
+}
+
+.input-group .form-control {
+	border: 1px solid #ccc;
+	padding: 6px 12px;
+}
+span.input-label {
+	padding: 7px 10px 7px 10px;
+	width: 100px;
+}
+
+/* datePicker edit view */
+ion-modal-view.modal {
+	bottom: 0%;
+}	

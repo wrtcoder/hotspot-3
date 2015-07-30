@@ -1,0 +1,51 @@
+<ion-view>
+	<ion-nav-buttons class="item-input-inset">
+	    <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+	    <h1 class='title'>Wifi Hotspot</h1>
+	    <button class="button" ui-sref="app.createHotspot">New</button>
+	</ion-nav-buttons>
+	<ion-content>
+		
+		<ion-list>
+			<div class='row header-padding'>
+					<div class="col-md-3 cell-padding">
+						<span>Service Provider</span>
+					</div>
+					<div class="col-md-2 cell-padding">
+						<span>Hotspot Name</span>
+					</div>
+					<div class="col-md-2 cell-padding">
+						<span>District</span>
+					</div>
+					<div class="col-md-2 cell-padding">
+						<span>Venue Type</span>
+					</div>
+					<div class="col-md-3 cell-padding">
+						<span>Address</span>
+					</div>
+			</div>
+			
+			<ion-item on-tap="clearCache();controller.read(model)" ng-controller="HotspotCtrl" ng-repeat="model in controller.collection.models">
+				<div class='row'>
+					<div class="col-md-3 nowrap">
+						<span>{{model.serviceProvider.name}}</span>
+					</div>
+					<div class="col-md-2 nowrap">
+						<span>{{model.hotspotName}}</span>
+					</div>
+					<div class="col-md-2 nowrap">
+						<span>{{model.district.area}}</span> 
+					</div>
+					<div class="col-md-2 nowrap">
+						<span>{{model.venueType.name}}</span> 
+					</div>
+					<div class="col-md-3 nowrap">
+						<span>{{model.address}}</span> 
+					</div>
+				</div>
+				<ion-option-button class="button button-assertive icon-left ion-trash-a" on-tap="$event.stopPropagation(); $parent.controller.collection.remove(model);">Delete</ion-option-button>
+			</ion-item>       
+		</ion-list>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,70 @@
+{
+  "name": "file",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node_modules/.bin/coffee --nodejs --debug app.coffee"
+  },
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "backbone-forms": "https://github.com/powmedia/backbone-forms/archive/master.tar.gz",
+    "backbone.marionette": "^2.3.0",
+    "backbone.paginator": "^2.0.2",
+    "body-parser": "^1.12.2",
+    "coffee-script": "^1.9.1",
+    "connect-busboy": "0.0.1",
+    "connect-ensure-login": "~0.1.1",
+    "cookie-parser": "^1.3.4",
+    "errorhandler": "^1.3.5",
+    "express": "^4.12.3",
+    "express-session": "^1.10.4",
+    "i18n": "~0.4.1",
+    "jade": "^1.9.2",
+    "log4js": "~0.6.14",
+    "mime": "~1.2.11",
+    "mongoose": "^4.0.1",
+    "mongoose-findorcreate": "0.1.2",
+    "mongoose-taggable": "~0.5.0",
+    "morgan": "^1.5.2",
+    "multer": "^0.1.8",
+    "needle": "~0.7.1",
+    "parsed-url": "0.0.0",
+    "passport": "0.1.17",
+    "passport-http-bearer": "1.0.1",
+    "passport-ttsoon": "https://github.com/twhtanghk/passport-ttsoon/archive/master.tar.gz",
+    "promise": "^4.0.0",
+    "restim": "https://github.com/twhtanghk/restim/archive/master.tar.gz",
+    "serve-favicon": "^2.2.0",
+    "underscore": "~1.6.0",
+    "zappajs": "~0.4.22"
+  },
+  "devDependencies": {
+    "bower": "^1.3.3",
+    "browserify": "^9.0.3",
+    "coffeeify": "^1.0.0",
+    "debowerify": "^1.2.0",
+    "gulp": "^3.8.11",
+    "gulp-bower": "0.0.10",
+    "gulp-browserify": "^0.5.1",
+    "gulp-coffee": "^2.3.1",
+    "gulp-concat": "^2.2.0",
+    "gulp-less": "^3.0.1",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^0.7.1",
+    "gulp-util": "^3.0.3",
+    "shelljs": "^0.3.0",
+    "vinyl-source-stream": "^1.0.0"
+  },
+  "cordovaPlugins": [
+    "com.ionic.keyboard",
+    "org.apache.cordova.console",
+    "org.apache.cordova.device",
+    "org.apache.cordova.inappbrowser",
+    "com.bridge.open",
+    "org.apache.cordova.file-transfer"
+  ],
+  "cordovaPlatforms": [
+    "android"
+  ]
+}

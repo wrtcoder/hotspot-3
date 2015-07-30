@@ -1,0 +1,71 @@
+<ion-view>
+
+	<ion-nav-buttons class="item-input-inset">
+	    <h1 class='title'>Wifi Hotspot</h1>
+	    <ion-button class="button ion-checkmark-round" ng-click="clearCache();controller.add()"></ion-button>
+	</ion-nav-buttons>
+
+	<ion-content>
+		<ion-list>
+				<div class='row'>
+					<div class="col-md-4">
+						<span class="input-label" style='width:200px'>Service Provider</span>
+					</div>
+					<div class="col-md-8">					
+						<select ng-options="item.name for item in providerController.collection.models track by item.code" ng-model="model.serviceProvider">
+							<option value="">-- choose service provider --</option>
+						</select>
+					</div>
+				</div>	
+				<div class='row'>
+					<div class="col-md-4">
+						<span class="input-label" style='width:200px;'>Hotspot Name</span>
+					</div>
+					<div class="col-md-8">	
+						<label class="item item-input">
+							<input type="text" ng-model="model.hotspotName" required>
+						</label>
+					</div>				
+				</div>
+				<div class='row' style='padding-top:10px;'>
+					<div class="col-md-4" >
+						<span class="input-label" style='width:200px;'>Venue Type</span>
+					</div>
+					<div class="col-md-8">					
+						<select ng-options="item.name for item in venueController.collection.models track by item.code" ng-model="model.venueType">
+							<option value="">-- choose venue type --</option>
+						</select>
+					</div>
+				</div>
+				<div class='row' style='padding-top:10px;'>
+					<div class="col-md-4" >
+						<span class="input-label" style='width:200px;'>District</span>
+					</div>
+					<div class="col-md-8">					
+						<select ng-options="item.district for item in districtController.collection.models | unique:'districtCode' track by item.districtCode" ng-model="model.district" ng-change="controller.selectChange()">
+							<option value="">-- choose district --</option>
+						</select>
+						
+						<select ng-options="item.area for item in areaController.collection.models | filter: {districtCode: selDistrict} track by item.areaCode" ng-model="model.area">
+							<option value="">-- choose area --</option>
+						</select>
+						
+					</div>
+					
+				</div>
+     			
+     			<div class='row'>
+					<div class="col-md-4">
+						<span class="input-label" style='width:200px;'>Address</span>
+					</div>
+					<div class="col-md-8">	
+						<label class="item item-input">
+							<input type="text" ng-model="model.address" required>
+						</label>
+					</div>				
+				</div>
+
+		</ion-list>
+	</ion-content>
+	
+</ion-view>

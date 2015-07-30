@@ -1,0 +1,15 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <button class="button button-clear button-positive" ng-click="model.$save({name: model.newname}); modal.hide();">Save</button>
+      <h1 class="title">Edit</h1>
+    <button class="button button-clear" ng-click="modal.hide()">Close</button>
+  </ion-header-bar>
+  <ion-content padding="true">
+  	<div class="list">
+	  <label class="item item-input">
+	  	<span class="input-label">Name</span>
+	    <input type="text" ng-model="model.newname" required>
+	  </label>
+	</div>
+  </ion-content>
+</ion-modal-view>

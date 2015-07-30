@@ -1,0 +1,8 @@
+{
+	"appenders": [ { "type": "file", "filename": "stdout.log" } ],
+	"levels": {
+		"app.coffee":			"DEBUG",
+		"xmpp.coffee":  		"ERROR",
+		"middleware.coffee":	"DEBUG"
+	}
+}

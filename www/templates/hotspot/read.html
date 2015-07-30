@@ -1,0 +1,53 @@
+<ion-view>
+	<ion-nav-buttons class="item-input-inset">
+	    <h1 class='title'>Wifi Hotspot</h1>
+	    <button class="button" ng-click="clearCache();controller.edit(model);">Edit</button>
+	</ion-nav-buttons>
+	<ion-content>
+		<ion-list>
+				<div class='row'>
+					<div class="col-md-4">
+						<span class="input-label cell-titleWidth">Service Provider</span>
+					</div>
+					<div class="col-md-8">					
+						<span class="input-label cell-width">{{model.serviceProvider.name}}</span>
+					</div>
+				</div>	
+				<div class='row'>
+					<div class="col-md-4">
+						<span class="input-label cell-titleWidth">Hotspot Name</span>
+					</div>
+					<div class="col-md-8">	
+						<span class="input-label cell-width">{{model.hotspotName}}</span>
+					</div>				
+				</div>
+				<div class='row' style='padding-top:10px;'>
+					<div class="col-md-4" >
+						<span class="input-label cell-titleWidth">Venue Type</span>
+					</div>
+					<div class="col-md-8">					
+						<span class="input-label cell-width">{{model.venueType.name}}</span>
+					</div>
+				</div>
+				<div class='row' style='padding-top:10px;'>
+					<div class="col-md-4" >
+						<span class="input-label cell-titleWidth">District</span>
+					</div>
+					<div class="col-md-8">					
+						<span class="input-label cell-width">{{model.district.area}}</span>
+					</div>
+					
+				</div>
+     			
+     			<div class='row'>
+					<div class="col-md-4">
+						<span class="input-label cell-titleWidth">Address</span>
+					</div>
+					<div class="col-md-8">	
+						<span class="input-label cell-width">{{model.address}}</span>
+					</div>				
+				</div>
+
+		</ion-list>
+	</ion-content>
+</ion-view>

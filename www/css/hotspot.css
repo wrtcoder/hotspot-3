@@ -1,0 +1,22 @@
+div.nowrap {
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	
+}
+div.header-padding {
+	padding-left:20px;
+	padding-right:55px;
+}
+div.cell-padding {
+	font-size: 16px;
+	padding-top: 7px;
+}
+span.cell-titleWidth{
+	width:200px;
+}
+span.cell-width{
+	width:400px;
+	max-width: 400px;
+}
