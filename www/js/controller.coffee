@@ -416,7 +416,11 @@ HotspotCtrl = ($rootScope, $scope, $state, $stateParams, $ionicModal, $ionicHist
 		
 		read: (selectedModel) ->
 			$state.go 'app.readHotspot', {'data': selectedModel}, { reload: true, cache: false }
-
+		
+		edit: (selectedModel) ->
+			$state.go 'app.editHotspot', {'data': selectedModel}, { reload: true, cache: false }
+			
+		
 	$scope.controller = new HotspotView model: $scope.model
 	
 

@@ -21229,6 +21229,15 @@ HotspotCtrl = function($rootScope, $scope, $state, $stateParams, $ionicModal, $i
       });
     };
 
+    HotspotView.prototype.edit = function(selectedModel) {
+      return $state.go('app.editHotspot', {
+        'data': selectedModel
+      }, {
+        reload: true,
+        cache: false
+      });
+    };
+
     return HotspotView;
 
   })();
