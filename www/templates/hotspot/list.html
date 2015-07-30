@@ -44,6 +44,7 @@
 						<span>{{model.address}}</span> 
 					</div>
 				</div>
+				<ion-option-button class="button button-positive icon-left ion-edit" on-tap="$event.stopPropagation(); controller.edit(model);">Edit</ion-option-button>
 				<ion-option-button class="button button-assertive icon-left ion-trash-a" on-tap="$event.stopPropagation(); $parent.controller.collection.remove(model);">Delete</ion-option-button>
 			</ion-item>       
 		</ion-list>
