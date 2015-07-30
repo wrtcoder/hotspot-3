@@ -1,0 +1,12 @@
+/node_modules
+/bower_components
+/platforms
+/plugins
+/template
+/uploads/**
+/www/css/**
+/www/lib
+/www/js/*.js
+/.project
+/*.orig
+/npm-debug.log
