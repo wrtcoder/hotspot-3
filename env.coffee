@@ -1,4 +1,4 @@
-proj = 'file'
+proj = 'hotspot'
 
 app =
 	url:	"http://localhost:3000/#{proj}"

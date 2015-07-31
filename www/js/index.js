@@ -20467,7 +20467,7 @@ module.run(function($ionicPlatform, $location, $http, authService) {
 
 module.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider.state('app', {
-    url: "/file",
+    url: "",
     abstract: true,
     controller: 'AppCtrl',
     templateUrl: "templates/menu.html"
@@ -20540,7 +20540,7 @@ module.config(function($stateProvider, $urlRouterProvider) {
       }
     }
   });
-  return $urlRouterProvider.otherwise('file/hotspot');
+  return $urlRouterProvider.otherwise('/hotspot');
 });
 
 
@@ -21351,7 +21351,7 @@ module.exports = {
     if (path == null) {
       path = this.path;
     }
-    return "http://localhost:3000/" + path;
+    return "https://mppsrc.ogcio.hksarg/" + path;
   },
   path: 'file',
   oauth2: function() {
@@ -21360,7 +21360,7 @@ module.exports = {
       opts: {
         response_type: "token",
         scope: "https://mppsrc.ogcio.hksarg/org/users https://mppsrc.ogcio.hksarg/file https://mppsrc.ogcio.hksarg/xmpp",
-        client_id: this.isNative() ? 'fileappPRD' : 'fileDEV',
+        client_id: this.isNative() ? 'fileappPRD' : 'hotspotDEVAuth',
         redirectUrl: this.isNative() ? 'http://localhost/callback' : 'http://localhost:3000/file/'
       }
     };
@@ -21890,7 +21890,7 @@ model = function(ActiveRecord, $rootScope, $upload, platform) {
 
     Hotspot.prototype.$idAttribute = '_id';
 
-    Hotspot.prototype.$urlRoot = (env.serverUrl()) + "/api/hotspot";
+    Hotspot.prototype.$urlRoot = "http://localhost:3000/api/hotspot";
 
     return Hotspot;
 
@@ -21904,7 +21904,7 @@ model = function(ActiveRecord, $rootScope, $upload, platform) {
 
     HotspotList.prototype.$idAttribute = '_id';
 
-    HotspotList.prototype.$urlRoot = (env.serverUrl()) + "/api/hotspot";
+    HotspotList.prototype.$urlRoot = "http://localhost:3000/api/hotspot";
 
     HotspotList.prototype.$parseModel = function(res, opts) {
       return new Hotspot(res);
@@ -21931,7 +21931,7 @@ model = function(ActiveRecord, $rootScope, $upload, platform) {
 
     Venue.prototype.$idAttribute = '_id';
 
-    Venue.prototype.$urlRoot = (env.serverUrl()) + "/api/venue";
+    Venue.prototype.$urlRoot = "http://localhost:3000/api/venue";
 
     return Venue;
 
@@ -21945,7 +21945,7 @@ model = function(ActiveRecord, $rootScope, $upload, platform) {
 
     VenueList.prototype.$idAttribute = '_id';
 
-    VenueList.prototype.$urlRoot = (env.serverUrl()) + "/api/venue";
+    VenueList.prototype.$urlRoot = "http://localhost:3000/api/venue";
 
     VenueList.prototype.$parse = function(res, opts) {
       _.each(res.results, (function(_this) {
@@ -21968,7 +21968,7 @@ model = function(ActiveRecord, $rootScope, $upload, platform) {
 
     Provider.prototype.$idAttribute = '_id';
 
-    Provider.prototype.$urlRoot = (env.serverUrl()) + "/api/provider";
+    Provider.prototype.$urlRoot = "http://localhost:3000/api/provider";
 
     return Provider;
 
@@ -21982,7 +21982,7 @@ model = function(ActiveRecord, $rootScope, $upload, platform) {
 
     ProviderList.prototype.$idAttribute = '_id';
 
-    ProviderList.prototype.$urlRoot = (env.serverUrl()) + "/api/provider";
+    ProviderList.prototype.$urlRoot = "http://localhost:3000/api/provider";
 
     ProviderList.prototype.$parse = function(res, opts) {
       _.each(res.results, (function(_this) {
@@ -22005,7 +22005,7 @@ model = function(ActiveRecord, $rootScope, $upload, platform) {
 
     District.prototype.$idAttribute = '_id';
 
-    District.prototype.$urlRoot = (env.serverUrl()) + "/api/district";
+    District.prototype.$urlRoot = "http://localhost:3000/api/district";
 
     return District;
 
@@ -22019,7 +22019,7 @@ model = function(ActiveRecord, $rootScope, $upload, platform) {
 
     DistrictList.prototype.$idAttribute = '_id';
 
-    DistrictList.prototype.$urlRoot = (env.serverUrl()) + "/api/district";
+    DistrictList.prototype.$urlRoot = "http://localhost:3000/api/district";
 
     DistrictList.prototype.$parse = function(res, opts) {
       _.each(res.results, (function(_this) {

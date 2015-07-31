@@ -16,7 +16,7 @@ module.run ($ionicPlatform, $location, $http, authService) ->
 module.config ($stateProvider, $urlRouterProvider) ->
 	    
 	$stateProvider.state 'app',
-		url: "/file"
+		url: ""
 		abstract: true
 		controller: 'AppCtrl'
 		templateUrl: "templates/menu.html"
@@ -72,4 +72,4 @@ module.config ($stateProvider, $urlRouterProvider) ->
 				templateUrl: "templates/hotspot/create.html"
 				controller: "createHotspotCtrl"			
 									
-	$urlRouterProvider.otherwise('file/hotspot')
+	$urlRouterProvider.otherwise('/hotspot')

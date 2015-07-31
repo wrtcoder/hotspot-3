@@ -283,12 +283,14 @@ model = (ActiveRecord, $rootScope, $upload, platform) ->
 	class Hotspot extends Model
 		$idAttribute: '_id'
 		
-		$urlRoot: "#{env.serverUrl()}/api/hotspot"
+		#$urlRoot: "#{env.serverUrl()}/api/hotspot"
+		$urlRoot: "http://localhost:3000/api/hotspot"
 	
 	class HotspotList extends Collection
 		$idAttribute: '_id'
 	
-		$urlRoot: "#{env.serverUrl()}/api/hotspot"
+		#$urlRoot: "#{env.serverUrl()}/api/hotspot"
+		$urlRoot: "http://localhost:3000/api/hotspot"
 		
 		$parseModel: (res, opts) ->
 			return new Hotspot res
@@ -302,12 +304,14 @@ model = (ActiveRecord, $rootScope, $upload, platform) ->
 	class Venue extends Model
 		$idAttribute: '_id'
 		
-		$urlRoot: "#{env.serverUrl()}/api/venue"
-
+		#$urlRoot: "#{env.serverUrl()}/api/venue"
+		$urlRoot: "http://localhost:3000/api/venue"
+		
 	class VenueList extends Collection
 		$idAttribute: '_id'
 	
-		$urlRoot: "#{env.serverUrl()}/api/venue"
+		#$urlRoot: "#{env.serverUrl()}/api/venue"
+		$urlRoot: "http://localhost:3000/api/venue"
 		
 		$parse: (res, opts) ->
 			_.each res.results, (value, key) =>
@@ -317,12 +321,14 @@ model = (ActiveRecord, $rootScope, $upload, platform) ->
 	class Provider extends Model
 		$idAttribute: '_id'
 		
-		$urlRoot: "#{env.serverUrl()}/api/provider"
+		#$urlRoot: "#{env.serverUrl()}/api/provider"
+		$urlRoot: "http://localhost:3000/api/provider"
 	
 	class ProviderList extends Collection
 		$idAttribute: '_id'
 	
-		$urlRoot: "#{env.serverUrl()}/api/provider"
+		#$urlRoot: "#{env.serverUrl()}/api/provider"
+		$urlRoot: "http://localhost:3000/api/provider"
 		
 		$parse: (res, opts) ->
 			_.each res.results, (value, key) =>
@@ -332,12 +338,14 @@ model = (ActiveRecord, $rootScope, $upload, platform) ->
 	class District extends Model
 		$idAttribute: '_id'
 		
-		$urlRoot: "#{env.serverUrl()}/api/district"
+		#$urlRoot: "#{env.serverUrl()}/api/district"
+		$urlRoot: "http://localhost:3000/api/district"
 
 	class DistrictList extends Collection
 		$idAttribute: '_id'
 	
-		$urlRoot: "#{env.serverUrl()}/api/district"
+		#$urlRoot: "#{env.serverUrl()}/api/district"
+		$urlRoot: "http://localhost:3000/api/district"
 		
 		$parse: (res, opts) ->
 			_.each res.results, (value, key) =>
