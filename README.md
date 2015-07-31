@@ -7,7 +7,7 @@ API
 ===
 
 ```
-#hotspot/create - create record
+#hotspot/create - create a record
 #hotspot/read/:id - read a record
 #hotspot/update/:id - update a record
 #hotspot/list - list all record
