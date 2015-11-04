@@ -247,6 +247,7 @@ createHotspotCtrl = ($rootScope, $scope, $state, $stateParams, $location, $ionic
 			if _.isEmpty ($scope.model.district) or _.isNull ($scope.model.district) or _.isUndefined ($scope.model.district)
 				$scope.areaList = []
 			else
+				$scope.model.area = {area:'', areaCode:''}
 				$scope.areaList = new model.DistrictList()
 				$scope.areaList.$fetch()
 			

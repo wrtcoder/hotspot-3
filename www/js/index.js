@@ -20945,6 +20945,10 @@ createHotspotCtrl = function($rootScope, $scope, $state, $stateParams, $location
       if (_.isEmpty($scope.model.district || _.isNull($scope.model.district || _.isUndefined($scope.model.district)))) {
         $scope.areaList = [];
       } else {
+        $scope.model.area = {
+          area: '',
+          areaCode: ''
+        };
         $scope.areaList = new model.DistrictList();
         $scope.areaList.$fetch();
       }
@@ -21347,21 +21351,14 @@ module.exports = {
     }
     return "http://localhost:3000/" + path;
   },
-  serverUrl2: function(path) {
-    if (path == null) {
-      path = this.path;
-    }
-    return "https://mppsrc.ogcio.hksarg/" + path;
-  },
-  path: 'file',
+  path: 'hotspot',
   oauth2: function() {
     return {
       authUrl: this.authUrl + "/org/oauth2/authorize/",
       opts: {
         response_type: "token",
         scope: "https://mppsrc.ogcio.hksarg/org/users https://mppsrc.ogcio.hksarg/file https://mppsrc.ogcio.hksarg/xmpp",
-        client_id: this.isNative() ? 'fileappPRD' : 'hotspotDEVAuth',
-        redirectUrl: this.isNative() ? 'http://localhost/callback' : 'http://localhost:3000/file/'
+        client_id: this.isNative() ? 'hotspotDEVAuth' : 'hotspotDEVAuth'
       }
     };
   }

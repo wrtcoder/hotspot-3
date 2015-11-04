@@ -46,6 +46,7 @@
 							<option value="">-- choose district --</option>
 						</select>
 						
+						
 						<select ng-options="item.area for item in areaController.collection.models | filter: {districtCode: selDistrict} track by item.areaCode" ng-model="model.area">
 							<option value="">-- choose area --</option>
 						</select>
