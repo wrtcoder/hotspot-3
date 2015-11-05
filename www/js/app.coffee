@@ -18,29 +18,8 @@ module.config ($stateProvider, $urlRouterProvider) ->
 	$stateProvider.state 'app',
 		url: ""
 		abstract: true
-		controller: 'AppCtrl'
 		templateUrl: "templates/menu.html"
 		
-	$stateProvider.state 'app.search',
-		url: "/search"
-		views:
-			'menuContent':
-				templateUrl: "templates/search.html"
-	
-	$stateProvider.state 'app.permission',
-		url: "/permission"
-		views:
-			'menuContent':
-				templateUrl: "templates/permission/list.html"
-				controller: "AclCtrl"
-
-	$stateProvider.state 'app.file',
-		url: "/file?path"
-		views:
-			'menuContent':
-				templateUrl: "templates/file/list.html"
-				controller: 'FileCtrl'
-
 	$stateProvider.state 'app.hotspot',
 		url: "/hotspot"
 		views:
