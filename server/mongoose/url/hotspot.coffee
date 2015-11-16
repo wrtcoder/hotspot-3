@@ -11,26 +11,53 @@ bearer = middleware.rest.user
  
 @include = ->
 		
-	@post '/api/hotspot', ->
+	@post '/api/hotspot', bearer, ->
 		controller.Hotspot.create(@request, @response)
 		 
-	@put '/api/hotspot/:id', ->
+	@put '/api/hotspot/:id', bearer, ->
 		controller.Hotspot.update(@request, @response)	
 
-	@get '/api/hotspot', ->
+	@get '/api/hotspot', bearer, ->
 		controller.Hotspot.list(@request, @response)
 				
-	@get '/api/hotspot/:id', ->
+	@get '/api/hotspot/:id', bearer, ->
 		controller.Hotspot.read(@request, @response)
 		
-	@del '/api/hotspot/:id', ->
+	@del '/api/hotspot/:id', bearer, ->
 		controller.Hotspot.delete(@request, @response)	
 	
-	@get '/api/venue',  ->
-		controller.Venue.list(@request, @response)
+	@get '/api/provider', bearer, ->
+		controller.Provider.list(@request, @response)
 		
-	@get '/api/district', ->
-		controller.District.list(@request, @response)
+	@post '/api/provider', bearer, ->
+		controller.Provider.create(@request, @response)
+		 
+	@put '/api/provider/:id', bearer, ->
+		controller.Provider.update(@request, @response)
 	
-	@get '/api/provider', ->
-		controller.Provider.list(@request, @response)	
+	@get '/api/provider/:id', bearer, ->
+		controller.Provider.read(@request, @response)
+
+	@get '/api/venue',  ->
+		controller.Venue.list(@request, @response)	
+
+	@post '/api/venue', bearer, ->
+		controller.Venue.create(@request, @response)
+		 
+	@put '/api/venue/:id', bearer, ->
+		controller.Venue.update(@request, @response)
+	
+	@get '/api/venue/:id', bearer, ->
+		controller.Venue.read(@request, @response)	
+	
+	@get '/api/district', bearer, ->
+		controller.District.list(@request, @response)
+		
+	@post '/api/district', bearer, ->
+		controller.District.create(@request, @response)
+		 
+	@put '/api/district/:id', bearer, ->
+		controller.District.update(@request, @response)
+	
+	@get '/api/district/:id', bearer, ->
+		controller.District.read(@request, @response)										
